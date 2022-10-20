@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    app: argocdrocks
+  name: fastapi-test-app
+spec:
+  project: fastapi-test
+  source:
+    repoURL: https://github.com/Xiang36/fastapi-k8s-example.git
+    targetRevision: main 
+    path: .
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

@@ -10,6 +10,7 @@ spec:
       port: 8080
       targetPort: 8080
   type: LoadBalancer
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -34,5 +35,5 @@ spec:
             - containerPort: 8080
           imagePullPolicy: Always
           resources:
-            - requests:
+            requests:
               cpu: "250m"
