@@ -5,7 +5,7 @@ metadata:
     app: argocdrocks
   name: fastapi-test-app
 spec:
-  project: fastapi-test
+  project: default
   source:
     repoURL: https://github.com/Xiang36/fastapi-k8s-example.git
     targetRevision: main 
