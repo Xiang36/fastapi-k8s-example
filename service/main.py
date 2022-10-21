@@ -11,4 +11,4 @@ app.include_router(api_router, prefix=API_V1_STR)
 
 @app.get("/ping", summary="Check that the service is operational")
 def pong():
-    return {"ping": "pong! B"}
+    return {"ping": "pong! C"}
